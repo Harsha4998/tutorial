@@ -33,7 +33,7 @@
   `define BSV_RESET_EDGE negedge
 `endif
 
-module dut(CLK,
+module intern_verilog(CLK,
 	   RST_N,
 
 	   EN_start,
