@@ -43,7 +43,7 @@ module dut_test(CLK,
   input  EN_next;
   output [31 : 0] next;
   output RDY_next;
-  dut dut(
+  intern_verilog dut(
 		.CLK(CLK),
 		.RST_N(RST_N),
 		.EN_Start(EN_Start),
