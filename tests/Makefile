@@ -6,6 +6,8 @@ VERILOG_SOURCES += $(PWD)/wrappers/ifc_test.v
 VERILOG_SOURCES += $(PWD)/../hdl/ifc_or.v
 VERILOG_SOURCES += $(PWD)/../hdl/FIFO1.v
 VERILOG_SOURCES += $(PWD)/../hdl/FIFO2.v
+VERILOG_SOURCES += $(PWD)/../hdl/intern_verilog.v
+VERILOG_SOURCES += $(PWD)/wrappers/dut_test.v
 all: or ifc
 or:
 	rm -rf sim_build
@@ -13,6 +15,9 @@ or:
 ifc:
 	rm -rf sim_build
 	$(MAKE) sim MODULE=ifc_test TOPLEVEL=ifc_test
+dut:
+	rm -rf sim_build
+	$(MAKE) sim MODULE=dut_test TOPLEVEL=dut_test
 coverage:
 	rm -rf sim_build
 	$(MAKE) sim MODULE=ifc_coverage TOPLEVEL=ifc_test
