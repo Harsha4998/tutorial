@@ -14,7 +14,7 @@ async def reset_seq(dut):
 
 
 @cocotb.test()
-async def test_case(dut):
+async def dut_test(dut):
     dut.EN_next.value = 0
     dut.EN_start.value = 0
     cocotb.start_soon(Clock(dut.CLK, 10, units="ns").start())
