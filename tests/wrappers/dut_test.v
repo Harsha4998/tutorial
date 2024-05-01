@@ -54,7 +54,7 @@ module dut_test(CLK,
 		.RDY_next(RDY_next)
 );
   initial begin
-	  $dumpfile("ifc.vcd");
+	  $dumpfile("intern_test.vcd");
 	  $dumpvars;
 	  CLK=0;
 	  forever begin
